@@ -20,4 +20,6 @@ interface UserRepository extends JpaRepository<User, Long> {
                 .findFirst();
     }
 
+    @Override
+    void delete(User entity);
 }

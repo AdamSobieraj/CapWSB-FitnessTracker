@@ -41,6 +41,15 @@ public class User {
 
         this.birthdate = birthdate;
         this.email = email;
+        this.firstName = firstName;
+        this.lastName = lastName;
+    }
+
+    public void update(String firstName, String lastName, LocalDate birthdate, String email) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.birthdate = birthdate;
+        this.email = email;
     }
 
 }
