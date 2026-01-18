@@ -6,7 +6,7 @@ import pl.wsb.fitnesstracker.user.api.UserDistDto;
 import pl.wsb.fitnesstracker.user.api.UserDto;
 
 @Component
-class UserMapper {
+public class UserMapper {
 
     UserDto toDto(User user) {
         return new UserDto(user.getId(),
