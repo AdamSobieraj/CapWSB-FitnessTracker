@@ -17,15 +17,18 @@ import java.util.stream.Collectors;
 import static org.antlr.v4.runtime.tree.xpath.XPath.findAll;
 
 @Service
-@RequiredArgsConstructor
 @Slf4j
 class UserServiceImpl implements UserService, UserProvider {
 
     private final UserRepository userRepository;
 
+    UserServiceImpl(UserRepository userRepository) {
+        this.userRepository = userRepository;
+    }
+
     @Override
     public User createUser(final User user) {
-        log.info("Creating User {}", user);
+//        log.info("Creating User {}", user);
         if (user.getId() != null) {
             throw new IllegalArgumentException("User has already DB ID, update is not permitted!");
         }

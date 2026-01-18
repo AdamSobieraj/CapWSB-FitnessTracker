@@ -50,13 +50,6 @@ public class User {
         this.email = email;
     }
 
-    public void update(String firstName, String lastName, LocalDate birthdate, String email) {
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.birthdate = birthdate;
-        this.email = email;
-    }
-
     @Nullable
     public Long getId() {
         return id;

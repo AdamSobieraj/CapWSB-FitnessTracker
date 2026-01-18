@@ -19,12 +19,16 @@ import java.util.Optional;
  */
 @RestController
 @RequestMapping("/v1/users")
-@RequiredArgsConstructor
 class UserController {
 
     private final UserServiceImpl userService;
 
     private final UserMapper userMapper;
+
+    UserController(UserServiceImpl userService, UserMapper userMapper) {
+        this.userService = userService;
+        this.userMapper = userMapper;
+    }
 
     @GetMapping("/simple")
     public List<UserDistDto> getAllDist() {
